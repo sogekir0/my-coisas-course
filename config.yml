@@ -1,0 +1,16 @@
+title: my coisas
+description: minhas coisa
+template:
+  repo: my-coisas-template
+  name: my-coisas
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
